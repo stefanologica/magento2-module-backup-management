@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">backup_listing.backup_listing_data_source</item>
+        </item>
+    </argument>
+    <settings>
+        <spinner>backup_columns</spinner>
+        <deps>
+            <dep>backup_listing.backup_listing_data_source</dep>
+        </deps>
+    </settings>
+    <dataSource name="backup_listing_data_source" component="Magento_Ui/js/grid/provider">
+        <settings>
+            <storageConfig>
+                <param name="indexField" xsi:type="string">filename</param>
+            </storageConfig>
+            <updateUrl path="mui/index/render"/>
+        </settings>
+        <aclResource>TuxWeb_BackupManagement::backup_list</aclResource>
+        <dataProvider class="TuxWeb\BackupManagement\Ui\DataProvider\BackupDataProvider"
+                     name="backup_listing_data_source">
+            <settings>
+                <requestFieldName>id</requestFieldName>
+                <primaryFieldName>filename</primaryFieldName>
+            </settings>
+        </dataProvider>
+    </dataSource>
+    <columns name="backup_columns">
+        <column name="filename">
+            <settings>
+                <filter>text</filter>
+                <label translate="true">Filename</label>
+            </settings>
+        </column>
+        <column name="type">
+            <settings>
+                <filter>text</filter>
+                <label translate="true">Type</label>
+            </settings>
+        </column>
+        <column name="created_at">
+            <settings>
+                <filter>dateRange</filter>
+                <dataType>date</dataType>
+                <label translate="true">Created At</label>
+            </settings>
+        </column>
+        <column name="size">
+            <settings>
+                <filter>text</filter>
+                <label translate="true">Size</label>
+            </settings>
+        </column>
+        <actionsColumn name="actions" class="TuxWeb\BackupManagement\Ui\Component\Listing\Column\BackupActions">
+            <settings>
+                <indexField>filename</indexField>
+                <resizeEnabled>false</resizeEnabled>
+                <resizeDefaultWidth>107</resizeDefaultWidth>
+            </settings>
+        </actionsColumn>
+    </columns>
+</listing>

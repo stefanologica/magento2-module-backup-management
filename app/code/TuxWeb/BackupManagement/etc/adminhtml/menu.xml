@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="TuxWeb_BackupManagement::backup"
+             title="Backup Management"
+             module="TuxWeb_BackupManagement"
+             sortOrder="100"
+             parent="Magento_Backend::system"
+             resource="TuxWeb_BackupManagement::backup"/>
+        <add id="TuxWeb_BackupManagement::backup_list"
+             title="Backup List"
+             module="TuxWeb_BackupManagement"
+             sortOrder="10"
+             parent="TuxWeb_BackupManagement::backup"
+             action="backup/index/index"
+             resource="TuxWeb_BackupManagement::backup_list"/>
+    </menu>
+</config>
