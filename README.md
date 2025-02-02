@@ -60,7 +60,7 @@ composer require tuxweb/module-backup-management
 
 If you find this module helpful, consider supporting its development:
 
-[![PayPal Donation](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://paypal.me/tustef)
+[![PayPal Donation](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://www.paypal.com/paypalme/stefanotux)
 
 ## License
 
@@ -68,7 +68,7 @@ If you find this module helpful, consider supporting its development:
 
 ## Author
 
-- **Stefano** - *Initial work* - [TuxWeb](https://github.com/tuxweb)
+- **Stefano** - *Initial work* - [TuxWeb](https://github.com/stefanologica)
 
 ## Contributing
 
