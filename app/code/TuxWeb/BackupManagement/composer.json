@@ -1,0 +1,16 @@
+{
+    "name": "tuxweb/backup-management",
+    "description": "This module manages backups for Magento 2.",
+    "type": "magento2-module",
+    "require": {
+        "php": ">=7.4.0"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "TuxWeb\\BackupManagement\\": ""
+        }
+    }
+}
