@@ -1,4 +1,4 @@
-io# Magento 2 Backup Management Module
+# Magento 2 Backup Management Module
 
 A robust backup management solution for Magento 2 that automates system and database backups with a user-friendly admin interface.
 
@@ -11,6 +11,7 @@ A robust backup management solution for Magento 2 that automates system and data
 - 📥 Easy download functionality for backup files
 - 🚫 Excludes unnecessary tables (cache, logs, sessions)
 - ⚡ Optimized for performance with proper MySQL dump options
+- For other many functionality as autoremove backup after 7 days, please contact me at stefano@tuxwebdesign.it
 
 ## Installation
 
