@@ -55,6 +55,9 @@ class DailyBackup
             // Log error
         }
 
+         // Rotate system backups (keep only the last 7 days)
+         $this->rotateBackups($backupDir, 'system_', 7);
+
         // Create database backup with secure options
         $dbConfig = $this->deploymentConfig->get('db/connection/default');
         $dbBackupFile = $backupDir . 'db_' . $timestamp . '.sql.gz';
@@ -78,6 +81,9 @@ class DailyBackup
             // Log error
         }
 
+         // Rotate database backups (keep only the last 14 days)
+         $this->rotateBackups($backupDir, 'db_', 14);
+
         return $this;
     }
 
@@ -88,5 +94,18 @@ class DailyBackup
                " --ignore-table=" . escapeshellarg($config['dbname'] . ".session") .
                " --ignore-table=" . escapeshellarg($config['dbname'] . ".report_event") .
                " --ignore-table=" . escapeshellarg($config['dbname'] . ".report_viewed_product_index");
+    }
+    private function rotateBackups(string $backupDir, string $prefix, int $days)
+    {
+        $files = glob($backupDir . $prefix . '*.gz');
+        $now = time();
+
+        foreach ($files as $file) {
+            if (is_file($file)) {
+                if ($now - filemtime($file) >= 60 * 60 * 24 * $days) {
+                    unlink($file);
+                }
+            }
+        }
     }
 }

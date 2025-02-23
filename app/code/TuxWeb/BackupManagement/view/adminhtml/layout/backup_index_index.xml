@@ -5,6 +5,7 @@
     <body>
         <referenceContainer name="content">
             <uiComponent name="backup_listing"/>
+            <block class="Magento\Framework\View\Element\Template" name="backup_warning" template="TuxWeb_BackupManagement::backup/warning.phtml"/>
         </referenceContainer>
     </body>
 </page>

@@ -1,0 +1,24 @@
+
+<?php /** @var \Magento\Framework\View\Element\Template $block */ ?>
+<style>
+.backup-warning-container {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #fdf0d5;
+    border: 1px solid #ffd967;
+    border-radius: 4px;
+}
+.message-warning-header {
+    color: #6f4400;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+</style>
+<div class="backup-warning-container">
+    <div class="message-warning-header">
+    <?= __('The system performs 2 daily backups on dual disks in an external RAID geographically located away from the hosting server once a day of 2 types:') ?></div>
+    <ul>
+        <li><?= __('System (excluding Media) - 7-day rotation') ?></li>
+        <li><?= __('Database Backup - 14-day rotation') ?></li>
+    </ul>
+</div>

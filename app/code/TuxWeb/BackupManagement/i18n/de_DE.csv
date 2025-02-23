@@ -1,0 +1,4 @@
+"The system performs 2 daily backups on dual disks in an external RAID geographically located away from the hosting server once a day of 2 types:","Das System führt 2 tägliche Backups auf zwei Festplatten in einem externen RAID durch, das geografisch vom Hosting-Server getrennt ist, einmal pro Tag in 2 Typen:"  
+"System (excluding Media) - 7-day rotation","System (ohne Medien) - 7-Tage-Rotation"
+"System - 7-day rotation","System - 7-Tage-Rotation"
+"Database Backup - 14-day rotation","Datenbank-Backup - 14-Tage-Rotation"
