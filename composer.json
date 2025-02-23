@@ -2,7 +2,7 @@
     "name": "tuxweb/backup-management",
     "description": "This module manages backups for Magento 2.",
     "type": "magento2-module",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "require": {
         "php": ">=7.4.0"
     },
