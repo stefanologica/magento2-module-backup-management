@@ -1,4 +1,10 @@
 <?php
+/**
+ * Copyright © 2025 Tux Web Design. All rights reserved.
+ * See LICENSE.txt for license details.
+ */
+declare(strict_types=1);
+
 namespace TuxWeb\BackupManagement\Ui\DataProvider;
 
 use Magento\Framework\App\Filesystem\DirectoryList;
