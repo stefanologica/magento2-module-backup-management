@@ -3,7 +3,7 @@
     "type": "magento2-module",
     "description": "This module manages backups for Magento 2.",
     "keywords": ["magento2","backup","enhanced","mageOS"],
-    "homepage": "hhttps://github.com/stefanologica/magento2-module-backup-management",
+    "homepage": "https://github.com/stefanologica/magento2-module-backup-management",
     "license": "MIT",
     "version": "1.0.5",
     "authors": [
